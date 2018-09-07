@@ -13,7 +13,7 @@
     "url": "git://github.com/jakobmattsson/opra.git"
   },
   "engines": {
-    "node": ">= 0.12 > 5"
+    "node": ">= 0.12 > 9"
   },
   "scripts": {
     "prepublish": "coffee -c -o lib src",
@@ -36,7 +36,7 @@
     "express-jit-coffee": "^0.2.0",
     "glob": "^6.0.1",
     "less": "^1.7.5",
-    "npm": "^2.1.18 < 2.2",
+    "npm": "5.6.0",
     "optimist": "^0.6.1",
     "powerfs": "^0.2.3",
     "serve-static": "^1.10.0",
