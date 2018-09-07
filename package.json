@@ -16,6 +16,7 @@
     "node": ">= 0.12 > 9"
   },
   "scripts": {
+    "install": "coffee -c -o lib src",
     "prepublish": "coffee -c -o lib src",
     "pretest": "coffee -c -o lib src",
     "test": "mocha --globals exists --timeout 10000 --require spec/lib.js spec/**/*.coffee",
