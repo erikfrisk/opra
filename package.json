@@ -1,16 +1,16 @@
 {
-  "name": "opra",
+  "name": "opra-erikfrisk",
   "description": "Single page app builder",
   "main": "./lib/opra.js",
   "bin": {
     "opra": "./bin/opra"
   },
-  "version": "0.19.3",
+  "version": "0.20.0",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jakobmattsson/opra.git"
+    "url": "git://github.com/erikfrisk/opra.git"
   },
   "engines": {
     "node": ">= 0.12 > 9"
