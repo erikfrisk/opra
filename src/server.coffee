@@ -1,14 +1,15 @@
 http = require 'http'
 path = require 'path'
 connect = require 'connect'
+serveStatic = require 'serve-static'
 jit = require 'express-jit-coffee'
 
 exports.construct = ({ serve }) ->
-  ({ port, root, notFound }) ->
+  ({ port, root, notFound }, callback) ->
     dir = path.resolve(process.cwd(), root)
     fourofour = if notFound? then path.relative(root, notFound) else null
 
-    app = connect().use(serve(dir)).use(jit(dir)).use(connect.static(dir))
+    app = connect().use(serve(dir)).use(jit(dir)).use(serveStatic(dir))
 
     if fourofour
       app.use (req, res, next) ->
@@ -18,5 +19,5 @@ exports.construct = ({ serve }) ->
 
       app.use(serve(dir))
 
-    http.createServer(app).listen(port)
-    { dir, fourofour }
+    http.createServer(app).listen port, ->
+      callback(null, { dir, fourofour })
